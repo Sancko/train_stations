@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
  <body>
-    
     <div class="center">
         <h1>Welcome to the Tran Sattions</h1>
-        <p>
-            <%= link_to "State station No 1", station_path(1), class: "btn btn-lg btn-primary"%>
-        </p>
-        <p>
-             <%= link_to "State station No 2", station_path(2), class: "btn btn-lg btn-primary"%>
-        </p>
-
+            <%i=1%>
+            <% (Station.count).times do%>
+            <p>
+                <%= link_to "State station No #{i}", station_path(i), 
+                                            class: "btn btn-lg btn-primary"%>
+            </p>
+            <% i+=1%>
+            <%end%>
     </div>
     </body>
 </html>
